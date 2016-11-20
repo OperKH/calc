@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<title>Calculator</title>
+	<meta charset=utf-8>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel=stylesheet href=main.css>
+</head>
+<body>
+	<main class=calculator-body>
+		<div class=screen>
+			<div class=row1>
+				<span class="last-calculation"></span>&nbsp;<span class="last-operator"></span>
+			</div>
+			<div class=row2></div>
+		</div>
+		<div class=keyboard>
+			<div class=row>
+				<button type=button class="key" value=7>7</button>
+				<button type=button class="key" value=8>8</button>
+				<button type=button class="key" value=9>9</button>
+				<button type=button class="key key-operator" value=/>&divide;</button>
+			</div>
+			<div class=row>
+				<button type=button class="key" value=4>4</button>
+				<button type=button class="key" value=5>5</button>
+				<button type=button class="key" value=6>6</button>
+				<button type=button class="key key-operator" value=*>&times;</button>
+			</div>
+			<div class=row>
+				<button type=button class="key" value=1>1</button>
+				<button type=button class="key" value=2>2</button>
+				<button type=button class="key" value=3>3</button>
+				<button type=button class="key key-operator" value=->&minus;</button>
+			</div>
+			<div role=group class=row>
+				<button type=button class="key" value=0>0</button>
+				<button type=button class="key" value=.>.</button>
+				<button type=button class="key key-equal" value="=">=</button>
+				<button type=button class="key key-operator" value=+>+</button>
+			</div>
+		</div>
+	</main>
+	<script src=main.js defer></script>
+</body>
+</html>
