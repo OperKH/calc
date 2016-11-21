@@ -66,6 +66,9 @@
 	}
 
 	function processOperatorButton(buttonValue) {
+		if (resultIsNaN()) {
+			return;
+		}
 		if (result) {
 			lastCalculation = lastCalculation ? eval(`${lastCalculation} ${lastOperator} ${parseFloat(result)}`) : result;
 			result = null;
@@ -88,6 +91,9 @@
 		result = result.replace(/^00/, '0');
 	}
 	function processEqualButton(buttonValue) {
+		if (resultIsNaN()) {
+			return;
+		}
 		if (!lastCalculation) {
 			lastOperator = buttonValue;
 			return;
@@ -115,6 +121,10 @@
 			}
 		}
 		return output;
+	}
+
+	function resultIsNaN() {
+		return isNaN(Number(result));
 	}
 
 	function getButtonValueByKey(key) {
