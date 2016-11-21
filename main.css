@@ -135,9 +135,14 @@ body {
 	background-color: #f06292;
 }
 
-@media screen and (max-width: 501px) {
+@media screen and (max-width: 767px) and (orientation: portrait) {
 	.calculator-body {
 		border-radius: 8px;
+	}
+}
+@media screen and (max-width: 767px) and (orientation: landscape) {
+	.calculator-body {
+		border-radius: 5px;
 	}
 }
 @media screen and (max-width: 501px) and (orientation: portrait) {
