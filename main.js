@@ -113,11 +113,12 @@
 		let output = num;
 		if (isFinite(num)) {
 			const isInteger = Number.isInteger(Number(num));
-			if ( Math.abs(num) > 99999999) {
+			const absNum = Math.abs(num);
+			if (absNum > 99999999) {
 				output = 'big num';
 			} else if (!isInteger) {
 				const sign = num < 0 ? -1 : 1;
-				output = parseFloat(String(num).slice(0, 8)) * sign;
+				output = parseFloat(String(absNum).slice(0, 8)) * sign;
 			}
 		}
 		return output;
