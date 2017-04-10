@@ -1,10 +1,10 @@
 'use strict';
 (() => {
-	const [ screen ] = document.getElementsByClassName('screen');
-	const [ lastCalculationEl ] = screen.getElementsByClassName('last-calculation');
-	const [ lastOperatorEl ] = screen.getElementsByClassName('last-operator');
-	const [ resultEl ] = screen.getElementsByClassName('row2');
-	const [ keyboard ] = document.getElementsByClassName('keyboard');
+	const screen = document.querySelector('.screen');
+	const lastCalculationEl = screen.querySelector('.last-calculation');
+	const lastOperatorEl = screen.querySelector('.last-operator');
+	const resultEl = screen.querySelector('.row2');
+	const keyboard = document.querySelector('.keyboard');
 	const validButtonsRegExp = /^[\d\.=\+\-\*\/]$/;
 	const operatorButtonRegExp = /^[\+\-\*\/]$/;
 	const operandButtonRegExp = /^[\d\./]$/;
