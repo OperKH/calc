@@ -31,21 +31,21 @@ body {
 	margin: auto;
 	padding: calc( var(--basic-size) / 13 );
 
-	border-radius: 13px;
+	border-radius: calc(1rem / 2);
 	background-color: #e0e0e0;
 }
 .screen {
 	z-index: 0;
 
-	margin-bottom: calc( var(--basic-size) / 8 );
+	margin-bottom: calc( var(--basic-size) / 8 );
+
 	padding: calc( var(--basic-size) / 13 );
 
 	text-align: right;
 
-	border: 1px solid #999;
-	border-radius: 2px;
+	border: calc(1rem / 13) solid #999;
 	background-color: #a7b8a9;
-	box-shadow: inset 0 0 5px 0 rgba(0,0,0,.55);
+	box-shadow: inset 0 0 calc(1rem / 2) 0 rgba(0,0,0,.55);
 
 	font-family: "Digital-7 Mono", "Lucida Console", Monaco, monospace;
 	font-size: 8rem;
@@ -114,19 +114,19 @@ body {
 .key {
 	opacity: .89;
 	border: 0;
-	border-radius: 2px;
+	border-radius: calc(1rem / 5);;
 	outline: none;
 	background-color: #ffe4c4;
-	box-shadow: 0 0 5px 0 rgba(0,0,0,.34);
+	box-shadow: 0 0 calc(1rem / 2) 0 rgba(0,0,0,.34);
 }
 .key:hover,
 .key.hover {
-	box-shadow: 0 0 5px 0 rgba(0,0,0,.55);
+	box-shadow: 0 0 calc(1rem / 2) 0 rgba(0,0,0,.55);
 }
 .key:active,
 .key.active {
 	opacity: 1;
-	box-shadow: inset 0 0 5px 0 rgba(0,0,0,.34);
+	box-shadow: inset 0 0 calc(1rem / 2) 0 rgba(0,0,0,.34);
 }
 .key.key-operator {
 	background-color: #4fc3f7;
@@ -135,16 +135,6 @@ body {
 	background-color: #f06292;
 }
 
-@media screen and (max-width: 767px) and (orientation: portrait) {
-	.calculator-body {
-		border-radius: 8px;
-	}
-}
-@media screen and (max-width: 767px) and (orientation: landscape) {
-	.calculator-body {
-		border-radius: 5px;
-	}
-}
 @media screen and (max-width: 501px) and (orientation: portrait) {
 	:root {
 		--basic-size: calc( 21vmin + 8vmin + 2vmin );
